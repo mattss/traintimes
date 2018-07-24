@@ -27,5 +27,8 @@ data = result.json()
 print(data['station_name'])
 
 for result in data['departures']['all']:
-    print('{aimed_departure_time} // {status} - {destination_name}'.format(
-        **result))
+    print(
+        '{aimed_departure_time} // [{platform}] {status}'
+        ' - {destination_name}'.format(
+            **result
+        ))
